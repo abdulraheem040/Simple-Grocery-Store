@@ -1,0 +1,525 @@
+<mat-toolbar style="background: linear-gradient(to left, #437b51, #00250c);height: 200px;">
+    <mat-toolbar-row style="margin-top: 20px;">
+        <img src="assets\pics\logo.png" alt="aa" height="70px" routerLink="/Home">
+        <button mat-button style="margin-left: 150px;color: white;font-size: large;" routerLink="/Home">Home</button>
+        <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Shop">Shop</button>
+        <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Products">Products</button>
+        <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Blog">Blog</button>
+        <button mat-button style="margin-left: 80px;color: white;font-size: large;">Contact Us</button>
+        <button mat-icon-button style="margin-left: 100px;">
+          <mat-icon style="color: white;">search</mat-icon> 
+      </button>
+      <button mat-icon-button style="margin-left: 30px;"> 
+        <mat-icon style="color: white;">shopping_cart</mat-icon>
+      </button>
+      <button mat-raised-button style="background-color: #e37d10;color: white;margin-left: 30px;"><b>Sign Up</b></button>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row style="font-size: 40px;color: white;margin-top: 40px;justify-content: center;">
+    <h1 >Home/Products</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div>
+<br>
+<br>
+  <h2 style="text-align: center;" id="Vegetables">Vegetables</h2>
+  <br>
+  <div style="display: flex;flex-wrap: wrap;">
+    <div style="border-radius: 5px; padding: 10px;margin-left: 90px; width: 200px; background-color: white; height: 285px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); ">
+      <div style="height: 120px;background-color: #aeebbd;">
+        <img src="assets\pics\bra.png" style="margin-left: 40px;margin-top: 20px;" height="70px">
+      </div>
+      <p style="color: rgb(79, 242, 79);font-size: small;"><b>VEGETABLE</b></p>
+      <p><b>From Fresh Organic<br> Bracoli 250g</b></p>
+      <p style="color: orange;"><b>$3.00</b></p>
+      <div>
+        <button onclick="decrementQuantity()">-</button>
+        <span id="quantity"> 1 </span>
+        <button onclick="incrementQuantity()">+</button>
+        <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>      
+      </div>
+    </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: auto; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 50px; ">
+    <div style="height: 120px;background-color: #f5cff5;">
+      <img src="assets\pics\Carrot.png" style="margin-left: 40px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>VEGETABLE</b></p>
+    <p><b>From Fresh Organic<br> Carrots 1kg</b></p>
+    <p style="color: orange;"><b>$3.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 285px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+    <div style="height: 120px;background-color: #f3ebbe;">
+      <img src="assets\pics\Potato.png" style="margin-left: 50px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>VEGETABLE</b></p>
+    <p><b>From Fresh Organic<br> Potatoes 1kg</b></p>
+    <p style="color: orange;"><b>$4.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 285px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #f5cff5;">
+      <img src="assets\pics\Onion.png" style="margin-left: 50px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>VEGETABLE</b></p>
+    <p><b>From Fresh Organic<br> Onions 1kg</b></p>
+    <p style="color: orange;"><b>$2.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 320px; width: 200px; background-color: white; height: 285px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #aeebbd;">
+      <img src="assets/pics/Cabbage.png" style="margin-left: 40px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>VEGETABLE</b></p>
+    <p><b>From Fresh Organic<br> Cabbage 1kg</b></p>
+    <p style="color: orange;"><b>$6.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+</div>
+<br>
+<hr>
+<br>
+<h2 style="text-align: center;" id="Fruits" >Fruits</h2>
+<br>
+<div style="display: flex;flex-wrap: wrap;">
+  <div style="border-radius: 5px; padding: 10px;margin-left: 90px; width: 200px; background-color: white; height: 285px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); ">
+    <div style="height: 120px;background-color: #ecf4a0;">
+      <img src="assets\pics\mangoes.png" style="margin-left: 30px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT</b></p>
+    <p><b>From Fresh Organic<br> Mangoes 1kg</b></p>
+    <p style="color: orange;"><b>$10.00</b></p>
+    <div>
+      <button onclick="decrementQuantity()">-</button>
+      <span id="quantity"> 1 </span>
+      <button onclick="incrementQuantity()">+</button>
+      <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+        <mat-icon>shopping_cart</mat-icon>
+      </button> 
+    </div>
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: auto; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 50px; ">
+    <div style="height: 120px;background-color: #ecf4a0;">
+      <img src="assets\pics\oranges.png" style="margin-left: 40px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT</b></p>
+    <p><b>From Fresh Organic<br> Orange 12 Pieces</b></p>
+    <p style="color: orange;"><b>$6.4.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 285px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+    <div style="height: 120px;background-color: #f5cff5;">
+      <img src="assets\pics\apple.png" style="margin-left: 40px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT</b></p>
+    <p><b>From Fresh Organic<br> Apple 1kg</b></p>
+    <p style="color: orange;"><b>$12.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 285px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #f5cff5;">
+      <img src="assets\pics\grapes.png" style="margin-left: 40px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT</b></p>
+    <p><b>From Fresh Organic<br> Grapes 1kg</b></p>
+    <p style="color: orange;"><b>$8.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+      <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 320px; width: 200px; background-color: white; height: 285px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #ecf4a0;">
+      <img src="assets\pics\Banana.png" style="margin-left: 30px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT</b></p>
+    <p><b>From Fresh Organic<br> Banana 12 Pieces</b></p>
+    <p style="color: orange;"><b>$2.5.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+</div>
+<br>
+<hr>
+<br>
+<h2 style="text-align: center;" id="Drinks">Fresh Drinks</h2>
+<br>
+<div style="display: flex;flex-wrap: wrap;">
+  <div style="border-radius: 5px; padding: 10px;margin-left: 90px; width: 200px; background-color: white; height: 285px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); ">
+    <div style="height: 120px;background-color: #f5cff5;">
+      <img src="assets\pics\strawberry.png" style="margin-left: 30px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT JUICE</b></p>
+    <p><b>From Fresh Organic<br> Fresh Berry Lemonade</b></p>
+    <p style="color: orange;"><b>$12.00</b></p>
+    <div>
+      <button onclick="decrementQuantity()">-</button>
+      <span id="quantity"> 1 </span>
+      <button onclick="incrementQuantity()">+</button>
+      <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+        <mat-icon>shopping_cart</mat-icon>
+      </button> 
+    </div>
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: auto; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 50px; ">
+    <div style="height: 120px;background-color: #f5cff5;">
+      <img src="assets\pics\Cranberry-Basil.png" style="margin-left: 50px;margin-top: 1px;" height="120px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT JUICE</b></p>
+    <p><b>From Fresh Organic<br> Cranberry-Basil Spritzer</b></p>
+    <p style="color: orange;"><b>$15.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 285px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+    <div style="height: 120px;background-color: #f5cff5;">
+      <img src="assets\pics\watermalon.png" style="margin-left: 50px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT JUICE</b></p>
+    <p><b>From Fresh Organic<br> Icy Watermelon Granita</b></p>
+    <p style="color: orange;"><b>$13.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 305px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #ecf4a0;">
+      <img src="assets\pics\Fizzy Cranberry-Lemonade Punch.png" style="margin-left: 45px;margin-top: 1px;" height="150px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT JUICE</b></p>
+    <p><b>From Fresh Organic<br> Fizzy Cranberry-Lemonade Punch</b></p>
+    <p style="color: orange;"><b>$18.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 320px; width: 200px; background-color: white; height: 305px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #aeebbd;">
+      <img src="assets\pics\cucumber.png" style="margin-left: 10px;margin-top: 20px;" height="100px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT JUICE</b></p>
+    <p><b>From Fresh Organic<br> Cucumber, Lemon, and Mint Fizz</b></p>
+    <p style="color: orange;"><b>$20.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+</div>
+<br>
+<hr>
+<br>
+  <h2 style="text-align: center;" id="Nuts">Fresh Nuts</h2>
+  <br>
+  <div style="display: flex;flex-wrap: wrap;">
+    <div style="border-radius: 5px; padding: 10px;margin-left: 90px; width: 200px; background-color: white; height: 285px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); ">
+      <div style="height: 120px;background-color: #ecf4a0;">
+        <img src="assets\pics\almond.png" style="margin-left: 30px;margin-top: 20px;" height="70px">
+      </div>
+      <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRESH NUT</b></p>
+      <p><b>From Fresh Organic<br> Almonds 1kg</b></p>
+      <p style="color: orange;"><b>$30.00</b></p>
+      <div>
+        <button onclick="decrementQuantity()">-</button>
+        <span id="quantity"> 1 </span>
+      <button onclick="incrementQuantity()">+</button>
+      <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+        <mat-icon>shopping_cart</mat-icon>
+      </button> 
+    </div>
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: auto; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 50px; ">
+    <div style="height: 120px;background-color: #d7d2a7;">
+      <img src="assets\pics\brasil.png" style="margin-left: 50px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRESH NUT</b></p>
+    <p><b>From Fresh Organic<br> Brazil Nuts 1kg</b></p>
+    <p style="color: orange;"><b>$25.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 285px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+    <div style="height: 120px;background-color: #ecf4a0;">
+      <img src="assets\pics\cashew.png" style="margin-left: 30px;margin-top: 1px;" height="150px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRESH NUT</b></p>
+    <p><b>From Fresh Organic<br> Cashew Nuts 1kg</b></p>
+    <p style="color: orange;"><b>$35.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 295px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #ecf4a0;">
+      <img src="assets\pics\hazelnuts.png" style="margin-left: 35px;margin-top: 20px;" height="100px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRESH NUT</b></p>
+    <p><b>From Fresh Organic<br> Hazelnuts 1kg</b></p>
+    <p style="color: orange;"><b>$37.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 320px; width: 200px; background-color: white; height: 295px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #d7d2a7;">
+      <img src="assets\pics\Macadamias.png" style="margin-left: 40px;margin-top: 20px;" height="100px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRESH NUT</b></p>
+    <p><b>From Fresh Organic<br> Macadamias 1kg</b></p>
+    <p style="color: orange;"><b>$39.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+</div>
+<br>
+<hr>
+<br>
+<h2 style="text-align: center;" id="Spices">Spices</h2>
+<br>
+<div style="display: flex;flex-wrap: wrap;">
+  <div style="border-radius: 5px; padding: 10px;margin-left: 90px; width: 200px; background-color: white; height: 285px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); ">
+    <div style="height: 120px;background-color: #fee296;">
+      <img src="assets\pics\cumins.png" style="margin-left: 40px;margin-top: 20px;" height="100px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>SPICE</b></p>
+    <p><b>From Fresh Organic<br> Cumins 250g</b></p>
+    <p style="color: orange;"><b>$20.00</b></p>
+    <div>
+      <button onclick="decrementQuantity()">-</button>
+      <span id="quantity"> 1 </span>
+      <button onclick="incrementQuantity()">+</button>
+      <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+        <mat-icon>shopping_cart</mat-icon>
+      </button> 
+    </div>
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: auto; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 50px; ">
+    <div style="height: 120px;background-color: #d7d2a7;">
+      <img src="assets\pics\cloves.png" style="margin-left: 40px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>SPICE</b></p>
+    <p><b>From Fresh Organic<br> clove 250g</b></p>
+    <p style="color: orange;"><b>$25.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 285px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+    <div style="height: 120px;background-color: #ecf4a0;">
+      <img src="assets\pics\coninder.png" style="margin-left: 30px;margin-top: 1px;" height="120px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>SPICE</b></p>
+    <p><b>From Fresh Organic<br> Coriander</b></p>
+    <p style="color: orange;"><b>$29.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 295px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #f7d868;">
+      <img src="assets\pics\Cinnamomums.png" style="margin-left: 20px;margin-top: 20px;" height="100px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>SPICE</b></p>
+    <p><b>From Fresh Organic<br> Cinnamon 250g</b></p>
+    <p style="color: orange;"><b>$31.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 320px; width: 200px; background-color: white; height: 295px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #f8d487;">
+      <img src="assets\pics\tumeric.png" style="margin-left: 40px;margin-top: 20px;" height="100px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>SPICE</b></p>
+    <p><b>From Fresh Organic<br> Turmeric 250g</b></p>
+    <p style="color: orange;"><b>$16.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+</div>
+<br>
+<hr>
+<br>
+<h2 style="text-align: center;" id="Pastas">pastas</h2>
+<br>
+<div style="display: flex;flex-wrap: wrap;">
+  <div style="border-radius: 5px; padding: 10px;margin-left: 90px; width: 200px; background-color: white; height: 285px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); ">
+    <div style="height: 120px;background-color: #ecf4a0;">
+      <img src="assets\pics\Orecchiette.png" style="margin-left: 40px;margin-top: 20px;" height="100px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>PASTA</b></p>
+    <p><b>From Fresh Organic<br> Orecchiette</b></p>
+    <p style="color: orange;"><b>$30.00</b></p>
+    <div>
+      <button onclick="decrementQuantity()">-</button>
+      <span id="quantity"> 1 </span>
+      <button onclick="incrementQuantity()">+</button>
+      <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+        <mat-icon>shopping_cart</mat-icon>
+      </button> 
+    </div>
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: auto; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 50px; ">
+    <div style="height: 120px;background-color: #ef9d82;">
+      <img src="assets\pics\Fusilli.png" style="margin-left: 40px;margin-top: 20px;" height="70px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>PASTA</b></p>
+    <p><b>From Fresh Organic<br> Fusilli</b></p>
+    <p style="color: orange;"><b>$30.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 285px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+    <div style="height: 120px;background-color: #ecf4a0;">
+      <img src="assets\pics\Bucatini.png" style="margin-left: 30px;margin-top: 10px;" height="90px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>PASTA</b></p>
+    <p><b>From Fresh Organic<br> Bucatini </b></p>
+    <p style="color: orange;"><b>$30.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 295px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #ef9d82;">
+      <img src="assets\pics\Penne.png" style="margin-left: 40px;margin-top: 20px;" height="80px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>PASTA</b></p>
+    <p><b>From Fresh Organic<br> Penne</b></p>
+    <p style="color: orange;"><b>$30.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+  <div style="border-radius: 5px; padding: 10px;margin-left: 320px; width: 200px; background-color: white; height: 295px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
+    <div style="height: 120px;background-color: #d7d2a7;">
+      <img src="assets\pics\farfalle.png" style="margin-left: 40px;margin-top: 20px;" height="80px">
+    </div>
+    <p style="color: rgb(79, 242, 79);font-size: small;"><b>PASTA</b></p>
+    <p><b>From Fresh Organic<br> Farfalle</b></p>
+    <p style="color: orange;"><b>$30.00</b></p>
+    <button onclick="decrementQuantity()">-</button>
+    <span id="quantity"> 1 </span>
+    <button onclick="incrementQuantity()">+</button>
+    <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
+      <mat-icon>shopping_cart</mat-icon>
+    </button> 
+  </div>
+</div>
+<br>
+<br>
+</div>
+<footer style="background: linear-gradient(to left, #548f63, #013913);">
+  <img src="assets\pics\logo.png" alt="aa" height="70px" style="margin-top: 20px;">
+</footer>

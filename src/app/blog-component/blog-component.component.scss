@@ -1,0 +1,39 @@
+.example-card {
+    width: 300px;
+    padding: 16px;
+    margin-top: 40px;
+    margin-left: 70px;
+    color: rgb(134, 113, 86);
+    background-color: rgb(249, 232, 211);
+  }
+.example-card mat-card-content {
+    padding: 8px 0; /* Adjust the value as needed */
+  }
+  
+
+.example-card mat-card-actions {
+    padding: 8px 0; /* Adjust the value as needed */
+  }
+.example-card.expanded {
+    max-height: none;
+    overflow: visible;
+  }
+  
+.example-card.collapsed {
+    height: 200px; /* Set an initial height that fits 50% of your content */
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+  }
+  .example-card img {
+    max-width: 100%; /* Make sure the image doesn't exceed the container's width */
+    height: 200px; /* Allow the image to maintain its aspect ratio */
+    transition: transform 0.5s ease-in-out; /* Apply a smooth transition for the image */
+  }
+  .example-card.collapsed img {
+    transform: scale(1); /* Maintain the image size when collapsed */
+  }
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
