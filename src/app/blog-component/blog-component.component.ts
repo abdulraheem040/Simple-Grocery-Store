@@ -6,17 +6,18 @@ import { RouterLink, RouterLinkActive, RouterOutlet, Router } from '@angular/rou
 import {MatCardModule} from '@angular/material/card';
 import { NgFor } from '@angular/common';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-
+import { DialogComponentComponent } from '../dialog-component/dialog-component.component';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 interface Card {
   showMore: boolean;
   longText: string;
-  imageSrc: string;
+  imageSrc: string; 
   altText: string;
 }
 @Component({
   selector: 'app-blog-component',
   standalone: true,
-  imports: [MatToolbarModule, MatIconModule, MatButtonModule, RouterOutlet, RouterLink, RouterLinkActive, MatCardModule, NgFor],
+  imports: [MatToolbarModule, MatIconModule, MatButtonModule, RouterOutlet, RouterLink, RouterLinkActive, MatCardModule, NgFor,MatDialogModule],
   templateUrl: './blog-component.component.html',
   styleUrl: './blog-component.component.scss',
   animations: [
@@ -28,7 +29,7 @@ interface Card {
   ]
 })
 export class BlogComponentComponent {
-  
+   constructor(public dialog: MatDialog){}
   cards: Card[] = [
     {
       showMore: false,
@@ -77,4 +78,14 @@ export class BlogComponentComponent {
   toggleShowMore(card: Card) {
     card.showMore = !card.showMore;
   }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogComponentComponent, {
+        width: '400px',
+        height: '500px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+    });
+}
 }

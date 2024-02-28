@@ -4,32 +4,32 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { RouterLink, RouterLinkActive, RouterOutlet, Router } from '@angular/router';
 import { ProductComponentComponent } from '../product-component/product-component.component';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { DialogComponentComponent } from '../dialog-component/dialog-component.component';
 @Component({
   selector: 'app-home-component',
   standalone: true,
-  imports: [MatToolbarModule, MatIconModule, MatButtonModule, RouterOutlet, RouterLink, RouterLinkActive, ProductComponentComponent],
+  imports: [MatToolbarModule, MatIconModule, MatButtonModule, RouterOutlet, RouterLink, RouterLinkActive, 
+    ProductComponentComponent, MatDialogModule],
   templateUrl: './home-component.component.html',
   styleUrl: './home-component.component.scss'
 })
 export class HomeComponentComponent {
 
-  constructor(private router: Router) {}
-  navigateToFruits() {
-    window.location.href = '/Home/Products#Fruits';
+  constructor(private router: Router,public dialog: MatDialog) {}
+  navigateToProducts() {
+    this.router.navigateByUrl('/Home/Products#Fruits');
   }
-  navigateToVegetables() {
-    window.location.href = '/Home/Products#Vegetables';
-  }
-  navigateToDrinks() {
-    window.location.href = '/Home/Products#Drinks';
-  }
-  navigateToNuts() {
-    window.location.href = '/Home/Products#Nuts';
-  }
-  navigateToSpices() {
-    window.location.href = '/Home/Products#Spices';
-  }
-  navigateToPastas() {
-    window.location.href = '/Home/Products#Pastas';
-  }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogComponentComponent, {
+        width: '400px',
+        height: '500px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+    });
 }
+
+}
+  

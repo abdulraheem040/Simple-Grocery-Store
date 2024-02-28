@@ -1,0 +1,94 @@
+<mat-toolbar style="background: linear-gradient(to left, #437b51, #00250c);height: 200px;">
+    <mat-toolbar-row style="margin-top: 20px;">
+        <img src="assets\pics\logo.png" alt="aa" height="70px" routerLink="/Home">
+        <button mat-button style="margin-left: 150px;color: white;font-size: large;" routerLink="/Home">Home</button>
+        <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Shop">Shop</button>
+        <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Products">Products</button>
+        <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Blog">Blog</button>
+        <button mat-button style="margin-left: 80px;color: white;font-size: large;" routerLink="/Home/ContactUs">Contact Us</button>
+        <button mat-icon-button style="margin-left: 100px;">
+          <mat-icon style="color: white;">search</mat-icon>
+      </button>
+      <button mat-icon-button style="margin-left: 30px;" routerLink="/Home/Cart">
+        <mat-icon style="color: white;">shopping_cart</mat-icon>
+      </button>
+      <button mat-raised-button style="background-color: #e37d10;color: white;margin-left: 30px;" (click)="openDialog()"><b>Sign Up</b></button>
+  </mat-toolbar-row>
+  <mat-toolbar-row style="font-size: 40px;color: white;margin-top: 40px;justify-content: center;">
+    <h1 >Home/Contact Us</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div style="display: flex;background: linear-gradient(to left, #437b51, #00250c);">
+  <div style="margin-top: 100px;margin-left: 180px;color: white;">
+    <mat-icon style="font-size: 48px; border: 1px solid #c0c0c0; border-radius: 50%; display: inline-block;height: auto;width: auto;padding: 10px;background-color:rgb(152, 194, 158);">location_on</mat-icon>
+    <div style="margin-left: -20px;">
+      <h3>Capital Square</h3>
+      <p style="font-size: medium;">Block D, 7th Floor,<br>Flat 707, Gate 2, B-17. <br>Islamabad</p>
+      <br>
+      <h3>B1 Markaz</h3>
+      <p>House 65, Street 45, <br> B1 Markaz, Gate 2, B-17 <br>Islamabad </p>
+    </div>
+  </div>
+  <div style="margin-top: 100px;margin-left: 190px;color: white;">
+    <mat-icon style="font-size: 48px; border: 1px solid #c0c0c0; border-radius: 50%; display: inline-block;height: auto;width: auto;padding: 10px;background-color:rgb(152, 194, 158);">phone</mat-icon>
+    <div style="margin-left: -30px;">
+      <h3>Capital Square</h3>
+      <p>(+92)310-7851615</p>
+      <p>(051) 2805017</p>
+      <br>
+      <h3>B1 Markaz</h3>
+      <p>(+92)341-4244795</p>
+      <p>(+92)314-7553750</p>
+      <h3></h3>
+    </div>
+  </div>
+  <div style="margin-top: 100px;margin-left: 230px;color: white;">
+    <mat-icon style="font-size: 48px; border: 1px solid #c0c0c0; border-radius: 50%; display: inline-block;height: auto;width: auto;padding: 10px;background-color:rgb(152, 194, 158);">email</mat-icon>
+    <div style="margin-left: -50px;">
+      <h3>For Order and Information</h3>
+      <p ><a href="mailto:{{ emailAddress1 }}" style="color: white;">{{ emailAddress1 }}</a></p>
+      <br>
+      <h3>For Online delivery and Promotion details</h3>
+      <p><a href="mailto:{{ emailAddress2 }}" style="color: white;">{{ emailAddress2 }}</a></p>
+      <br>
+      <h3>For Any Query and Rating</h3>
+      <p><a href="mailto:{{ emailAddress3 }}" style="color: white;">{{ emailAddress3 }}</a></p>
+    </div>
+  </div>
+</div>
+<div style="margin-top: 50px;margin-left: 80px;display: flex;">
+  <div>
+    <h2>Message Us</h2>
+    <p>Feel free to reach out to us! Whether you have questions, <br> feedback, or need assistance, we're here to help. Your <br> messages are important to us, and we'll respond promptly. <br> Thank you for getting in touch!</p>
+  </div>
+  <div style="margin-left: 250px;margin-top: 30px;display: flex;flex-direction: column;">
+      <h3>Full Name:</h3>
+      <mat-form-field>
+        <mat-label>Enter your Full Name</mat-label>
+        <input matInput [formControl]="nameFormControl">
+        <mat-error>{{nameError}}</mat-error>
+      </mat-form-field>
+      <br>
+      <h3>Email:</h3>
+      <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput [formControl]="email" required>
+        @if (email.invalid) {
+          <mat-error>{{getErrorEmailMessage()}}</mat-error>
+        }
+      </mat-form-field>
+      <br>
+      <h3>Message: </h3>
+      <mat-form-field>
+        <mat-label>Your Review</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button style="background-color: #e37d10;color: white;width: 70px;"><b>Submit</b></button>
+    </div>
+</div>
+<br>
+<br>
+<footer style="background: linear-gradient(to left, #437b51, #00250c);">
+  <img src="assets\pics\logo.png" alt="aa" height="70px" style="margin-top: 20px;">
+</footer>

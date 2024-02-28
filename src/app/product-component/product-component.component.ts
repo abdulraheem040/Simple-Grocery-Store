@@ -2,18 +2,25 @@ import { Component } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet, Router } from '@angular/router';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import { NgIf } from '@angular/common';
+import { NgIf, NgFor } from '@angular/common';
+import { QuantityService } from '../quantity.service';
+import { DialogComponentComponent } from '../dialog-component/dialog-component.component';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+export interface GroceryItem {
+  name: string;
+  quantity: number;
+}
 @Component({
   selector: 'app-product-component',
   standalone: true,
-  imports: [MatToolbarModule,NgIf, MatIconModule, MatButtonModule, RouterOutlet, RouterLink, RouterLinkActive, MatPaginatorModule],
+  imports: [MatToolbarModule,NgIf, MatIconModule, MatButtonModule, RouterOutlet, RouterLink, RouterLinkActive, MatPaginatorModule, NgFor,MatDialogModule],
   templateUrl: './product-component.component.html',
   styleUrl: './product-component.component.scss'
 })
 export class ProductComponentComponent {
-  
+  constructor(private router: Router,private quantityService: QuantityService,public dialog: MatDialog) {}
 showNextHalf() {
   const firstHalf = document.getElementById('first-half') as HTMLElement;
   const secondHalf = document.getElementById('second-half') as HTMLElement;
@@ -40,9 +47,25 @@ showPreviousHalf() {
   previousButton?.addEventListener('click', this.showPreviousHalf);
   firstHalf.scrollIntoView({ behavior: 'smooth' });
 }
-// products.ts
+getQuantity(index: number): number {
+  return this.quantityService.getQuantity(index);
+}
 
+decrementQuantity(index: number) {
+  this.quantityService.decrementQuantity(index);
+}
 
+incrementQuantity(index: number) {
+  this.quantityService.incrementQuantity(index);
+}
+openDialog(): void {
+  const dialogRef = this.dialog.open(DialogComponentComponent, {
+      width: '400px',
+      height: '500px',
+  });
 
-  
+  dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+  });
+}
 }

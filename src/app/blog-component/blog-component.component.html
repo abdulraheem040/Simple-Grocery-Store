@@ -5,14 +5,14 @@
         <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Shop">Shop</button>
         <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Products">Products</button>
         <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Blog">Blog</button>
-        <button mat-button style="margin-left: 80px;color: white;font-size: large;">Contact Us</button>
+        <button mat-button style="margin-left: 80px;color: white;font-size: large;" routerLink="/Home/ContactUs">Contact Us</button>
         <button mat-icon-button style="margin-left: 100px;">
           <mat-icon style="color: white;">search</mat-icon>
       </button>
-      <button mat-icon-button style="margin-left: 30px;">
+      <button mat-icon-button style="margin-left: 30px;" routerLink="/Home/Cart">
         <mat-icon style="color: white;">shopping_cart</mat-icon>
       </button>
-      <button mat-raised-button style="background-color: #e37d10;color: white;margin-left: 30px;"><b>Sign Up</b></button>
+      <button mat-raised-button style="background-color: #e37d10;color: white;margin-left: 30px;" (click)="openDialog()"><b>Sign Up</b></button>
   </mat-toolbar-row>
 
   <mat-toolbar-row style="font-size: 40px;color: white;margin-top: 40px;justify-content: center;">
@@ -31,7 +31,7 @@
             <span style="color: rgb(6, 176, 6);">PRODUCT </span>
             <span style="color: white;margin-left: 5px;"> ONLINE</span>
         </h1>
-        <button mat-raised-button style="margin-left: 50px;margin-top: 30px;color: white;background-color: #e37d10;" routerLink="/Home/Shop">Get Your Now</button>
+        <button mat-raised-button style="margin-left: 50px;margin-top: 30px;color: white;background-color: #e37d10;" routerLink="/Home/Shop"><b>Get Your Now</b></button>
     </div>
 </div>
 <div class="card-container">
@@ -53,6 +53,6 @@
 <br>
 <br>
 <h1 style="text-align: center;">Subscribe for more</h1>
-<footer style="background: linear-gradient(to left, #548f63, #013913);">
+<footer style="background: linear-gradient(to left, #437b51, #00250c);">
   <img src="assets\pics\logo.png" alt="aa" height="70px" style="margin-top: 20px;">
 </footer>

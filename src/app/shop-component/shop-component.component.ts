@@ -5,15 +5,21 @@ import {MatButtonModule} from '@angular/material/button';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { NgIf } from '@angular/common';
+import { QuantityService } from '../quantity.service';
+import { DialogComponentComponent } from '../dialog-component/dialog-component.component';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+
 @Component({
   selector: 'app-shop-component',
   standalone: true,
   imports: [MatToolbarModule, MatIconModule, MatButtonModule, RouterOutlet, 
-    RouterLink, RouterLinkActive, MatPaginatorModule,NgIf],
+    RouterLink, RouterLinkActive, MatPaginatorModule,NgIf,MatDialogModule],
   templateUrl: './shop-component.component.html',
   styleUrl: './shop-component.component.scss'
 })
 export class ShopComponentComponent {
+
+  constructor(private quantityService: QuantityService,public dialog: MatDialog){}
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   currentPage: number = 0;
 
@@ -43,4 +49,25 @@ export class ShopComponentComponent {
     this.paginator.pageIndex = pageIndex;
     this.paginator._changePageSize(this.paginator.pageSize);
   }
+  getQuantity(index: number): number {
+    return this.quantityService.getQuantity(index);
+  }
+  
+  decrementQuantity(index: number) {
+    this.quantityService.decrementQuantity(index);
+  }
+  
+  incrementQuantity(index: number) {
+    this.quantityService.incrementQuantity(index);
+  }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogComponentComponent, {
+        width: '400px',
+        height: '500px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+    });
+}
 }

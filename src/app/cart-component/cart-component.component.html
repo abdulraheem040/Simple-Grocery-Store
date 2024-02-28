@@ -1,0 +1,20 @@
+<mat-toolbar style="background: linear-gradient(to left, #437b51, #00250c);height: 200px;">
+    <mat-toolbar-row style="margin-top: 20px;">
+        <img src="assets\pics\logo.png" alt="aa" height="70px" routerLink="/Home">
+        <button mat-button style="margin-left: 150px;color: white;font-size: large;" routerLink="/Home">Home</button>
+        <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Shop">Shop</button>
+        <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Products">Products</button>
+        <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Blog">Blog</button>
+        <button mat-button style="margin-left: 80px;color: white;font-size: large;" routerLink="/Home/ContactUs">Contact Us</button>
+        <button mat-icon-button style="margin-left: 100px;">
+          <mat-icon style="color: white;">search</mat-icon>
+      </button>
+      <button mat-icon-button style="margin-left: 30px;" routerLink="/Home/Cart">
+        <mat-icon style="color: white;">shopping_cart</mat-icon>
+      </button>
+      <button mat-raised-button style="background-color: #e37d10;color: white;margin-left: 30px;" (click)="openDialog()"><b>Sign Up</b></button>
+  </mat-toolbar-row>
+  <mat-toolbar-row style="font-size: 40px;color: white;margin-top: 40px;justify-content: center;">
+    <h1 >Home/Cart</h1>
+  </mat-toolbar-row>
+</mat-toolbar>

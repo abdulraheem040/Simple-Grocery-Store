@@ -5,14 +5,14 @@
         <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Shop">Shop</button>
         <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Products">Products</button>
         <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Blog">Blog</button>
-        <button mat-button style="margin-left: 80px;color: white;font-size: large;">Contact Us</button>
+        <button mat-button style="margin-left: 80px;color: white;font-size: large;" routerLink="/Home/ContactUs">Contact Us</button>
         <button mat-icon-button style="margin-left: 100px;">
           <mat-icon style="color: white;">search</mat-icon>
       </button>
-      <button mat-icon-button style="margin-left: 30px;">
+      <button mat-icon-button style="margin-left: 30px;" routerLink="/Home/Cart">
         <mat-icon style="color: white;">shopping_cart</mat-icon>
       </button>
-      <button mat-raised-button style="background-color: #e37d10;color: white;margin-left: 30px;"><b>Sign Up</b></button>
+      <button mat-raised-button style="background-color: #e37d10;color: white;margin-left: 30px;" (click)="openDialog()"><b>Sign Up</b></button>
   </mat-toolbar-row>
 
   <mat-toolbar-row style="font-size: 40px;color: white;margin-top: 40px;justify-content: center;">
@@ -89,9 +89,9 @@
     <p><b>From Fresh Organic<br> Bracoli 250g</b></p>
     <p style="color: orange;"><b>$3.00</b></p>
     <div>
-      <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-      <button onclick="incrementQuantity()">+</button>
+      <button (click)="decrementQuantity(0)">-</button>
+      <span id="quantity"> {{getQuantity(0)}} </span>
+      <button (click)="incrementQuantity(0)">+</button>
       <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
         <mat-icon>shopping_cart</mat-icon>
       </button>      
@@ -105,9 +105,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>VEGETABLE</b></p>
     <p><b>From Fresh Organic<br> Carrots 1kg</b></p>
     <p style="color: orange;"><b>$3.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(1)">-</button>
+      <span id="quantity"> {{getQuantity(1)}} </span>
+    <button (click)="incrementQuantity(1)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -120,9 +120,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>VEGETABLE</b></p>
     <p><b>From Fresh Organic<br> Potatoes 1kg</b></p>
     <p style="color: orange;"><b>$4.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(2)">-</button>
+      <span id="quantity"> {{getQuantity(2)}} </span>
+    <button (click)="incrementQuantity(2)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -135,9 +135,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>VEGETABLE</b></p>
     <p><b>From Fresh Organic<br> Onions 1kg</b></p>
     <p style="color: orange;"><b>$2.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(3)">-</button>
+      <span id="quantity"> {{getQuantity(3)}} </span>
+    <button (click)="incrementQuantity(3)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -150,9 +150,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>VEGETABLE</b></p>
     <p><b>From Fresh Organic<br> Cabbage 1kg</b></p>
     <p style="color: orange;"><b>$6.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(4)">-</button>
+      <span id="quantity"> {{getQuantity(4)}} </span>
+    <button (click)="incrementQuantity(4)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -175,9 +175,9 @@
     <p><b>From Fresh Organic<br> Mangoes 1kg</b></p>
     <p style="color: orange;"><b>$10.00</b></p>
     <div>
-      <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-      <button onclick="incrementQuantity()">+</button>
+      <button (click)="decrementQuantity(5)">-</button>
+      <span id="quantity"> {{getQuantity(5)}} </span>
+      <button (click)="incrementQuantity(5)">+</button>
   </div>
   </div>
   <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: auto; 
@@ -188,9 +188,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT</b></p>
     <p><b>From Fresh Organic<br> Orange 12 Pieces</b></p>
     <p style="color: orange;"><b>$6.4.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(6)">-</button>
+      <span id="quantity"> {{getQuantity(6)}} </span>
+    <button (click)="incrementQuantity(6)">+</button>
   </div>
   <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 285px; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
@@ -200,9 +200,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT</b></p>
     <p><b>From Fresh Organic<br> Apple 1kg</b></p>
     <p style="color: orange;"><b>$12.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(7)">-</button>
+      <span id="quantity"> {{getQuantity(7)}} </span>
+    <button (click)="incrementQuantity(7)">+</button>
   </div>
   <div style="border-radius: 5px; padding: 10px;margin-left: 170px; width: 200px; background-color: white; height: 285px; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
@@ -212,9 +212,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT</b></p>
     <p><b>From Fresh Organic<br> Grapes 1kg</b></p>
     <p style="color: orange;"><b>$8.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(8)">-</button>
+      <span id="quantity"> {{getQuantity(8)}} </span>
+    <button (click)="incrementQuantity(8)">+</button>
   </div>
   <div style="border-radius: 5px; padding: 10px;margin-left: 320px; width: 200px; background-color: white; height: 285px; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);margin-top: 30px;">
@@ -224,9 +224,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT</b></p>
     <p><b>From Fresh Organic<br> Banana 12 Pieces</b></p>
     <p style="color: orange;"><b>$2.5.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(9)">-</button>
+      <span id="quantity"> {{getQuantity(9)}} </span>
+    <button (click)="incrementQuantity(9)">+</button>
   </div>
 </div>
 </div>
@@ -246,9 +246,9 @@
     <p><b>From Fresh Organic<br> Fresh Berry Lemonade</b></p>
     <p style="color: orange;"><b>$12.00</b></p>
     <div>
-      <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-      <button onclick="incrementQuantity()">+</button>
+      <button (click)="decrementQuantity(10)">-</button>
+      <span id="quantity"> {{getQuantity(10)}} </span>
+      <button (click)="incrementQuantity(10)">+</button>
       <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
         <mat-icon>shopping_cart</mat-icon>
       </button> 
@@ -262,9 +262,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT JUICE</b></p>
     <p><b>From Fresh Organic<br> Cranberry-Basil Spritzer</b></p>
     <p style="color: orange;"><b>$15.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(11)">-</button>
+      <span id="quantity"> {{getQuantity(11)}} </span>
+    <button (click)="incrementQuantity(11)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -277,9 +277,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT JUICE</b></p>
     <p><b>From Fresh Organic<br> Icy Watermelon Granita</b></p>
     <p style="color: orange;"><b>$13.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(12)">-</button>
+      <span id="quantity"> {{getQuantity(12)}} </span>
+    <button (click)="incrementQuantity(12)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -292,9 +292,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT JUICE</b></p>
     <p><b>From Fresh Organic<br> Fizzy Cranberry-Lemonade Punch</b></p>
     <p style="color: orange;"><b>$18.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(13)">-</button>
+      <span id="quantity"> {{getQuantity(13)}} </span>
+    <button (click)="incrementQuantity(13)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -307,9 +307,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRUIT JUICE</b></p>
     <p><b>From Fresh Organic<br> Cucumber, Lemon, and Mint Fizz</b></p>
     <p style="color: orange;"><b>$20.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(14)">-</button>
+      <span id="quantity"> {{getQuantity(14)}} </span>
+    <button (click)="incrementQuantity(14)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -331,9 +331,9 @@
     <p><b>From Fresh Organic<br> Almonds 1kg</b></p>
     <p style="color: orange;"><b>$30.00</b></p>
     <div>
-      <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-      <button onclick="incrementQuantity()">+</button>
+      <button (click)="decrementQuantity(15)">-</button>
+      <span id="quantity"> {{getQuantity(15)}} </span>
+      <button (click)="incrementQuantity(15)">+</button>
       <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
         <mat-icon>shopping_cart</mat-icon>
       </button> 
@@ -347,9 +347,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRESH NUT</b></p>
     <p><b>From Fresh Organic<br> Brazil Nuts 1kg</b></p>
     <p style="color: orange;"><b>$25.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(16)">-</button>
+      <span id="quantity"> {{getQuantity(16)}} </span>
+    <button (click)="incrementQuantity(16)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -362,9 +362,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRESH NUT</b></p>
     <p><b>From Fresh Organic<br> Cashew Nuts 1kg</b></p>
     <p style="color: orange;"><b>$35.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(17)">-</button>
+      <span id="quantity"> {{getQuantity(17)}} </span>
+    <button (click)="incrementQuantity(17)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -377,9 +377,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRESH NUT</b></p>
     <p><b>From Fresh Organic<br> Hazelnuts 1kg</b></p>
     <p style="color: orange;"><b>$37.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(18)">-</button>
+      <span id="quantity"> {{getQuantity(18)}} </span>
+    <button (click)="incrementQuantity(18)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -392,9 +392,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>FRESH NUT</b></p>
     <p><b>From Fresh Organic<br> Macadamias 1kg</b></p>
     <p style="color: orange;"><b>$39.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(19)">-</button>
+      <span id="quantity"> {{getQuantity(19)}} </span>
+    <button (click)="incrementQuantity(19)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -417,9 +417,9 @@
     <p><b>From Fresh Organic<br> Cumins 250g</b></p>
     <p style="color: orange;"><b>$20.00</b></p>
     <div>
-      <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-      <button onclick="incrementQuantity()">+</button>
+      <button (click)="decrementQuantity(20)">-</button>
+      <span id="quantity"> {{getQuantity(20)}} </span>
+      <button (click)="incrementQuantity(20)">+</button>
       <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
         <mat-icon>shopping_cart</mat-icon>
       </button> 
@@ -433,9 +433,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>SPICE</b></p>
     <p><b>From Fresh Organic<br> clove 250g</b></p>
     <p style="color: orange;"><b>$25.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(21)">-</button>
+      <span id="quantity"> {{getQuantity(21)}} </span>
+    <button (click)="incrementQuantity(21)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -448,9 +448,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>SPICE</b></p>
     <p><b>From Fresh Organic<br> Coriander</b></p>
     <p style="color: orange;"><b>$29.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(22)">-</button>
+      <span id="quantity"> {{getQuantity(22)}} </span>
+    <button (click)="incrementQuantity(22)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -463,9 +463,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>SPICE</b></p>
     <p><b>From Fresh Organic<br> Cinnamon 250g</b></p>
     <p style="color: orange;"><b>$31.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(23)">-</button>
+      <span id="quantity"> {{getQuantity(23)}} </span>
+    <button (click)="incrementQuantity(23)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -478,9 +478,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>SPICE</b></p>
     <p><b>From Fresh Organic<br> Turmeric 250g</b></p>
     <p style="color: orange;"><b>$16.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(24)">-</button>
+      <span id="quantity"> {{getQuantity(24)}} </span>
+    <button (click)="incrementQuantity(24)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -503,9 +503,9 @@
     <p><b>From Fresh Organic<br> Orecchiette</b></p>
     <p style="color: orange;"><b>$30.00</b></p>
     <div>
-      <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-      <button onclick="incrementQuantity()">+</button>
+      <button (click)="decrementQuantity(25)">-</button>
+      <span id="quantity"> {{getQuantity(25)}} </span>
+      <button (click)="incrementQuantity(25)">+</button>
       <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
         <mat-icon>shopping_cart</mat-icon>
       </button> 
@@ -519,9 +519,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>PASTA</b></p>
     <p><b>From Fresh Organic<br> Fusilli</b></p>
     <p style="color: orange;"><b>$30.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(26)">-</button>
+      <span id="quantity"> {{getQuantity(26)}} </span>
+    <button (click)="incrementQuantity(26)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -534,9 +534,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>PASTA</b></p>
     <p><b>From Fresh Organic<br> Bucatini </b></p>
     <p style="color: orange;"><b>$30.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(27)">-</button>
+      <span id="quantity"> {{getQuantity(27)}} </span>
+    <button (click)="incrementQuantity(27)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -549,9 +549,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>PASTA</b></p>
     <p><b>From Fresh Organic<br> Penne</b></p>
     <p style="color: orange;"><b>$30.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(28)">-</button>
+      <span id="quantity"> {{getQuantity(28)}} </span>
+    <button (click)="incrementQuantity(28)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -564,9 +564,9 @@
     <p style="color: rgb(79, 242, 79);font-size: small;"><b>PASTA</b></p>
     <p><b>From Fresh Organic<br> Farfalle</b></p>
     <p style="color: orange;"><b>$30.00</b></p>
-    <button onclick="decrementQuantity()">-</button>
-      <span id="quantity"> 1 </span>
-    <button onclick="incrementQuantity()">+</button>
+    <button (click)="decrementQuantity(29)">-</button>
+      <span id="quantity"> {{getQuantity(29)}} </span>
+    <button (click)="incrementQuantity(29)">+</button>
     <button style="margin-left: 90px; color: white; background-color: orange; border: 2px solid orange; border-radius: 5px;">
       <mat-icon>shopping_cart</mat-icon>
     </button> 
@@ -576,6 +576,6 @@
 <br>
 <br>
 </div>
-<footer style="background: linear-gradient(to left, #548f63, #013913);">
+<footer style="background: linear-gradient(to left, #437b51, #00250c);">
   <img src="assets\pics\logo.png" alt="aa" height="70px" style="margin-top: 20px;">
 </footer>

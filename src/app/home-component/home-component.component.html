@@ -5,14 +5,14 @@
         <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Shop">Shop</button>
         <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Products">Products</button>
         <button mat-button style="margin-left: 40px;color: white;font-size: large;" routerLink="/Home/Blog">Blog</button>
-        <button mat-button style="margin-left: 80px;color: white;font-size: large;">Contact Us</button>
+        <button mat-button style="margin-left: 80px;color: white;font-size: large;" routerLink="/Home/ContactUs">Contact Us</button>
         <button mat-icon-button style="margin-left: 100px;">
           <mat-icon style="color: white;">search</mat-icon>
       </button>
-      <button mat-icon-button style="margin-left: 30px;">
+      <button mat-icon-button style="margin-left: 30px;" routerLink="/Home/Cart">
         <mat-icon style="color: white;">shopping_cart</mat-icon>
       </button>
-      <button mat-raised-button style="background-color: #e37d10;color: white;margin-left: 30px;"><b>Sign Up</b></button>
+      <button mat-raised-button style="background-color: #e37d10;color: white;margin-left: 30px;" (click)="openDialog()"><b>Sign Up</b></button>
   </mat-toolbar-row>
   
   <mat-toolbar-row>
@@ -30,7 +30,7 @@
   <br>
   <br>
   <div style="display: flex;">
-    <div style="border-radius: 5px; padding: 10px;margin-left: 70px; color: rgb(79, 242, 79); width: 200px; background-color: white; height: 70px; display: flex; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, color 0.3s;"
+    <div style="border-radius: 5px; padding: 10px;margin-left: 70px; color: rgb(79, 242, 79); width: 200px; background-color: white; height: 70px; display: flex; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, color 0.3s; cursor: pointer;"
     onmouseover="this.style.boxShadow='0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.1)'; this.style.transform='scale(1.05)'; this.style.backgroundColor='rgb(92, 184, 92)'; this.style.color='white';"
     onmouseout="this.style.boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)'; this.style.transform='scale(1)'; this.style.backgroundColor='white'; this.style.color='rgb(79, 242, 79)';" routerLink="/Home/Products">
     <div style="height: 30px; background-color: #e37d10; padding: 10px; margin-top: 10px; margin-left: 10px;">
@@ -38,7 +38,7 @@
     </div>
     <h4 style="margin-left: 10px;">Products from <br>Organic Form</h4>
   </div>
-  <div style="border-radius: 5px; padding: 10px;margin-left: 90px; color: rgb(79, 242, 79); width: 200px; background-color: white; height: 70px; display: flex; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, color 0.3s;"
+  <div style="border-radius: 5px; padding: 10px;margin-left: 90px; color: rgb(79, 242, 79); width: 200px; background-color: white; height: 70px; display: flex; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, color 0.3s;cursor: pointer;"
   onmouseover="this.style.boxShadow='0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.1)'; this.style.transform='scale(1.05)'; this.style.backgroundColor='rgb(92, 184, 92)'; this.style.color='white';"
     onmouseout="this.style.boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)'; this.style.transform='scale(1)'; this.style.backgroundColor='white'; this.style.color='rgb(79, 242, 79)';">
     <div style="height: 30px; background-color: #e37d10; padding: 10px; margin-top: 10px; margin-left: 10px;">
@@ -46,7 +46,7 @@
     </div>
     <h4 style="margin-left: 10px;">Free Home <br>Delivery</h4>
   </div>
-  <div style="border-radius: 5px; padding: 10px;margin-left: 90px; color: rgb(79, 242, 79); width: 200px; background-color: white; height: 70px; display: flex; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, color 0.3s;"
+  <div style="border-radius: 5px; padding: 10px;margin-left: 90px; color: rgb(79, 242, 79); width: 200px; background-color: white; height: 70px; display: flex; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, color 0.3s;cursor: pointer;"
     onmouseover="this.style.boxShadow='0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.1)'; this.style.transform='scale(1.05)'; this.style.backgroundColor='rgb(92, 184, 92)'; this.style.color='white';"
     onmouseout="this.style.boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)'; this.style.transform='scale(1)'; this.style.backgroundColor='white'; this.style.color='rgb(79, 242, 79)';">
     <div style="height: 30px; background-color: #e37d10; padding: 10px; margin-top: 10px; margin-left: 10px;">
@@ -54,7 +54,7 @@
     </div>
     <h4 style="margin-left: 10px;">Promotion of <br>The Week</h4>
   </div>
-  <div style="border-radius: 5px; padding: 10px;margin-left: 90px; color: rgb(79, 242, 79); width: 200px; background-color: white; height: 70px; display: flex; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, color 0.3s;"
+  <div style="border-radius: 5px; padding: 10px;margin-left: 90px; color: rgb(79, 242, 79); width: 200px; background-color: white; height: 70px; display: flex; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, color 0.3s;cursor: pointer;"
     onmouseover="this.style.boxShadow='0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.1)'; this.style.transform='scale(1.05)'; this.style.backgroundColor='rgb(92, 184, 92)'; this.style.color='white';"
     onmouseout="this.style.boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)'; this.style.transform='scale(1)'; this.style.backgroundColor='white'; this.style.color='rgb(79, 242, 79)';">
     <div style="height: 30px; background-color: #e37d10; padding: 10px; margin-top: 10px; margin-left: 10px;">
@@ -71,40 +71,41 @@
     <h2>Browse Our Hottest</h2>
   </div>
   <br>
-  <div style="display: flex;">
+  <div style="display: flex;"> 
     <div style="margin-left: 150px; background-color: rgb(238, 221, 223); width: 100px; text-align: center; border-radius: 10px; padding: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-      transition: background-color 0.3s, transform 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgb(92, 184, 92)'; this.querySelector('p').style.color='white'; this.style.transform='scale(1.05)';
-      " onmouseout="this.style.backgroundColor='rgb(238, 221, 223)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToFruits()">
+      transition: background-color 0.3s, transform 0.3s; cursor: pointer;" 
+      onmouseover="this.style.backgroundColor='rgb(92, 184, 92)'; this.querySelector('p').style.color='white'; this.style.transform='scale(1.05)';" 
+      onmouseout="this.style.backgroundColor='rgb(238, 221, 223)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToProducts()">
     <img src="assets/pics/zyro-image.png" height="50px" style="display: block; margin: 0 auto;">
     <p style="color: black;"><b>Fruits</b></p>
-  </div>
+  </div>     
   <div style="margin-left: 90px; background-color: rgb(184, 240, 168); width: 100px; text-align: center; border-radius: 10px; padding: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-left: 40px;
       transition: background-color 0.3s, transform 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgb(92, 184, 92)'; this.querySelector('p').style.color='white'; this.style.transform='scale(1.05)';
-      " onmouseout="this.style.backgroundColor='rgb(184, 240, 168)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToVegetables()">
+      " onmouseout="this.style.backgroundColor='rgb(184, 240, 168)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToProducts()">
     <img src="assets/pics/veg.png" height="50px" style="display: block; margin: 0 auto;">
     <p style="color: black;"><b>Vegetables</b></p>
   </div>
   <div style="margin-left: 90px; background-color: rgb(225, 249, 218); width: 100px; text-align: center; border-radius: 10px; padding: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-left: 40px;
       transition: background-color 0.3s, transform 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgb(92, 184, 92)'; this.querySelector('p').style.color='white'; this.style.transform='scale(1.05)';
-      " onmouseout="this.style.backgroundColor='rgb(225, 249, 218)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToDrinks()">
+      " onmouseout="this.style.backgroundColor='rgb(225, 249, 218)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToProducts()">
     <img src="assets/pics/drink.png" height="50px" style="display: block; margin: 0 auto;">
     <p style="color: black;"><b>Drinks</b></p>
   </div>
   <div style="margin-left: 90px; background-color: rgb(249, 236, 250); width: 100px; text-align: center; border-radius: 10px; padding: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-left: 40px;
       transition: background-color 0.3s, transform 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgb(92, 184, 92)'; this.querySelector('p').style.color='white'; this.style.transform='scale(1.05)';
-      " onmouseout="this.style.backgroundColor='rgb(249, 236, 250)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToNuts()">
+      " onmouseout="this.style.backgroundColor='rgb(249, 236, 250)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToProducts()">
     <img src="assets/pics/nut.png" height="50px" style="display: block; margin: 0 auto;">
     <p style="color: black;"><b>Fresh Nuts</b></p>
     </div>
     <div style="margin-left: 90px; background-color: rgb(220, 229, 245); width: 100px; text-align: center; border-radius: 10px; padding: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-left: 40px;
       transition: background-color 0.3s, transform 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgb(92, 184, 92)'; this.querySelector('p').style.color='white'; this.style.transform='scale(1.05)';
-      " onmouseout="this.style.backgroundColor='rgb(220, 229, 245)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToSpices()">
+      " onmouseout="this.style.backgroundColor='rgb(220, 229, 245)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToProducts()">
     <img src="assets/pics/spice.png" height="70px" style="display: block; margin: 0 auto;">
     <p style="color: black;margin-top: 1px;"><b>Spices</b></p>
     </div>
     <div style="margin-left: 90px; background-color: rgb(242, 248, 175); width: 100px; text-align: center; border-radius: 10px; padding: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-left: 40px;
       transition: background-color 0.3s, transform 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgb(92, 184, 92)'; this.querySelector('p').style.color='white'; this.style.transform='scale(1.05)';
-      " onmouseout="this.style.backgroundColor='rgb(242, 248, 175)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToPastas()">
+      " onmouseout="this.style.backgroundColor='rgb(242, 248, 175)'; this.querySelector('p').style.color='black'; this.style.transform='scale(1)';" (click)="navigateToProducts()">
     <img src="assets/pics/pasta.png" height="70px" style="display: block; margin: 0 auto;">
     <p style="color: black;margin-top: 1px;"><b>Pastas</b></p>
   </div>
@@ -117,14 +118,14 @@
   <div style="margin-left: 100px;background-color: rgb(249, 236, 211);height: 170px;width: 275px;border-radius: 10px; padding: 20px;">
     <h2 style="color: rgb(79, 242, 79);">ENJOY 30% OFF</h2>
     <h3>All Fruits Arrives directly from the Garden</h3>
-    <button mat-raised-button style="background-color: #e37d10;color: white;" (click)="navigateToFruits()"><b>Shop Now</b></button>
+    <button mat-raised-button style="background-color: #e37d10;color: white;" (click)="navigateToProducts()"><b>Shop Now</b></button>
   </div>
   <div style="margin-left: 120px;background: linear-gradient(to right, #73ad82, #1f5220);height: 210px;width: 500px;border-radius: 10px;display: flex;">
     <img src="assets\pics\vegis-fotor-bg-remover-20240103192732.png" height="210px" style="margin-left: -29px;">
     <div>
         <h2 style="color: white;">ENJOY 30% OFF</h2>
-        <h3 style="color: white;">All Vegitables From the Forms and stores that arrives recently</h3>
-        <button mat-raised-button style="background-color: #e37d10;color: white;" (click)="navigateToVegetables()"><b>Shop Now</b></button>
+        <h3 style="color: white;">All Vegetables From the Forms and stores that arrives recently</h3>
+        <button mat-raised-button style="background-color: #e37d10;color: white;" routerLink="/Home/Products"><b>Shop Now</b></button>
       </div>
     </div>
   </div>
@@ -135,6 +136,6 @@
     <p style="color: rgb(79, 242, 79);text-align: center;"><b>BEST SELLING</b></p>
     <h2 style="text-align: center;">Browse Our Hottest</h2>
 </div>
-<footer style="background: linear-gradient(to left, #548f63, #013913);">
+<footer style="background: linear-gradient(to left, #437b51, #00250c);">
     <img src="assets\pics\logo.png" alt="aa" height="70px" style="margin-top: 20px;">
 </footer>
