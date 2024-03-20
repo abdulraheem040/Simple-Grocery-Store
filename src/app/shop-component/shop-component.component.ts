@@ -8,6 +8,8 @@ import { NgIf } from '@angular/common';
 import { QuantityService } from '../quantity.service';
 import { DialogComponentComponent } from '../dialog-component/dialog-component.component';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { CartService, CartItem } from '../cart.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-shop-component',
@@ -19,7 +21,7 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 })
 export class ShopComponentComponent {
 
-  constructor(private quantityService: QuantityService,public dialog: MatDialog){}
+  constructor(private quantityService: QuantityService,public dialog: MatDialog,private cartService: CartService){}
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   currentPage: number = 0;
 
@@ -69,5 +71,19 @@ export class ShopComponentComponent {
     dialogRef.afterClosed().subscribe(result => {
         console.log(`Dialog result: ${result}`);
     });
+}
+getPrice(index: number): number {
+  return this.quantityService.getPrice(index);
+} 
+addToCart(name: string, quantity: number, price: number) {
+  const item: CartItem = { name, quantity, price };
+  this.cartService.addToCart(item);
+
+  Swal.fire({
+    icon: "success",
+    title: "Added to Cart Successfully",
+    showConfirmButton: false,
+    timer: 1500
+  });
 }
 }

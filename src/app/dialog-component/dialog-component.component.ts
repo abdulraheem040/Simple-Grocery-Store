@@ -4,12 +4,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {FormControl, Validators, FormsModule, ReactiveFormsModule,AbstractControl, ValidationErrors} from '@angular/forms';
+import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-dialog-component',
   standalone: true,
-  imports: [MatSelectModule,MatInputModule,MatFormFieldModule, MatDialogModule,MatButtonModule,FormsModule,ReactiveFormsModule],
+  imports: [MatSelectModule,MatInputModule,MatFormFieldModule, MatDialogModule,MatButtonModule,FormsModule,ReactiveFormsModule,NgIf,MatIconModule],
   templateUrl: './dialog-component.component.html',
   styleUrl: './dialog-component.component.scss'
 })

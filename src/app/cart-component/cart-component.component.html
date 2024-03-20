@@ -18,3 +18,18 @@
     <h1 >Home/Cart</h1>
   </mat-toolbar-row>
 </mat-toolbar>
+<div style="text-align: center; margin-top: 80px; height: auto;">
+  <ng-container *ngFor="let item of cartItems; let last = last; let i = index">
+    <div class="item-container" [ngClass]="{'with-margin': !last}">
+      <p><b>{{ item.name }} - Quantity: {{ item.quantity }} - Price per item: ${{ item.price }}</b></p>
+      <button mat-raised-button style="background-color: #e37d10; color: white;">Buy</button>
+      <button mat-raised-button (click)="removeItem(i)" style="background-color: #e37d10; color: white;margin-left: 50px;">Clear</button>
+    </div>
+  </ng-container>
+  <p style="margin-top: 50px;">Total Price: ${{ getTotalPrice() }}</p>
+  <button mat-raised-button (click)="clearCart()" style="background-color: #e37d10; color: white;">Clear Cart</button>
+</div>
+
+
+
+

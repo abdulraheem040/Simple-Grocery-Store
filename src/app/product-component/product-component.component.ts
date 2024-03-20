@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -8,6 +8,8 @@ import { NgIf, NgFor } from '@angular/common';
 import { QuantityService } from '../quantity.service';
 import { DialogComponentComponent } from '../dialog-component/dialog-component.component';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import Swal from 'sweetalert2'
+import { CartService, CartItem } from '../cart.service';
 export interface GroceryItem {
   name: string;
   quantity: number;
@@ -20,11 +22,11 @@ export interface GroceryItem {
   styleUrl: './product-component.component.scss'
 })
 export class ProductComponentComponent {
-  constructor(private router: Router,private quantityService: QuantityService,public dialog: MatDialog) {}
+  constructor(private router: Router,private quantityService: QuantityService,public dialog: MatDialog,private cartService: CartService) {}
 showNextHalf() {
   const firstHalf = document.getElementById('first-half') as HTMLElement;
   const secondHalf = document.getElementById('second-half') as HTMLElement;
-
+  
   // Hide the first half
   firstHalf.style.display = 'none';
   // Show the second half
@@ -66,6 +68,21 @@ openDialog(): void {
 
   dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
+  });
+}
+getPrice(index: number): number {
+  return this.quantityService.getPrice(index);
+} 
+
+addToCart(name: string, quantity: number, price: number) {
+  const item: CartItem = { name, quantity, price };
+  this.cartService.addToCart(item);
+
+  Swal.fire({
+    icon: "success",
+    title: "Added to Cart Successfully",
+    showConfirmButton: false,
+    timer: 1500
   });
 }
 }

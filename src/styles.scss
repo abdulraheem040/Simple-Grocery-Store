@@ -1,4 +1,5 @@
 
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -31,7 +32,10 @@ $Grocery-Store-theme: mat.define-light-theme((
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
+// In your component or global styles file
+/* webpackIgnore: true */
 @include mat.all-component-themes($Grocery-Store-theme);
+/* webpackIgnore: true */
 
 /* You can add global styles to this file, and also import other style files */
 
